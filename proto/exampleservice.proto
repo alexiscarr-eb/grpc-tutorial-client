@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package com.eventbrite.grpckotlintutorial;
+
+option java_multiple_files = true;
+option java_package = "com.eventbrite.grpckotlintutorial.proto";
+option java_outer_classname = "ExampleProto";
+
+
+service FridayService {
+  rpc ItsFriday (ItsFridayRequest) returns (ItsFridayResponse) {}
+}
+
+message ItsFridayRequest {
+  string option = 1;
+
+}
+
+message ItsFridayResponse {
+  string response = 1; // numbering system must start at 1. s
+}
